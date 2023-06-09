@@ -16,29 +16,32 @@ app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
 
-app.get('/home', (req, res,) => { //This is the method for get the app, with the route
-  res.sendFile(path.join(__dirname + 'public', 'initial_page.html'))//With this we bring the route of the docs
-})
-app.get('/stats', (req, res, ) => { //This is the method for get the app, with the route
-  res.sendFile(path.join(_dirname + 'public', 'analytics.html'))//With this we bring the route of the docs
-}) 
+app.get('/', (req, res,) => { 
+  res.sendFile(path.join(__dirname + '/public', '/initial_page.html'));
+});
+app.get('/home', (req, res,) => { 
+  res.sendFile(path.join(__dirname + '/public', '/initial_page.html'));
+});
+app.get('/stats', (req, res, ) => { 
+  res.sendFile(path.join(_dirname + '/public', '/analytics.html'));
+}); 
 app.get('/landing', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'landing.html'));
+  res.sendFile(path.join(__dirname, '/public', '/landing.html'));
 });
 
 app.get('/activity', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'my_posts.html'));
+  res.sendFile(path.join(__dirname, '/public', '/my_posts.html'));
 });
 
 app.get('/routines', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'routines.html'));
+  res.sendFile(path.join(__dirname, '/public', '/routines.html'));
 });
 
 
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 
 app.use(logger('dev'));
 app.use(express.json());
