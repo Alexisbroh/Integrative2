@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:root {
+  --primary-bright-orange: hsl(31, 77%, 52%);
+  --primary-dark-cyan: hsl(184, 100%, 22%);
+  --primary-very-dark-cyan: hsl(179, 100%, 13%);
+  --neutral-transparent-white: hsla(0, 0%, 100%, 0.75); /* paragraphs */
+  --neutral-very-light-gray: hsl(0, 0%, 95%); /* background, headings, buttons */
+}
+
+body {
+  font-family: "Big Shoulders Display", "Lexend Deca", Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hero {
+  height: 100vh;
+}
+
+.container {
+  max-width: 1440px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: inherit;
+}
+
+.card {
+  width: 300px;
+  height: 500px;
+  padding: 45px;
+}
+
+.Arms {
+  background-color: var(--primary-bright-orange);
+  border-radius: 10px 0 0 10px;
+}
+
+.Chest {
+  background-color: var(--primary-dark-cyan);
+}
+
+.Back {
+  background-color: var(--primary-very-dark-cyan);
+  border-radius: 0 10px 10px 0;
+}
+
+.card-title {
+  text-transform: uppercase;
+  margin: 43px 0 43px 0;
+  color: var(--neutral-very-light-gray);
+}
+
+.text-style {
+  line-height: 1.45rem;
+  margin-bottom: 72px;
+}
+
+.text-style,
+.btn {
+  color: var(--neutral-transparent-white);
+}
+
+.btn {
+  border: 3px solid var(--neutral-very-light-gray);
+  background: none;
+  text-transform: capitalize;
+  padding: 15px 30px;
+  border-radius: 100px;
+  transition: background 300ms ease-in-out;
+}
+
+.btn:hover, 
+.btn:focus {
+  background: var(--neutral-very-light-gray);
+  cursor: pointer;
+}
+
+.btn-Arms:hover, 
+.btn-Arms:focus {
+  color: var(--primary-bright-orange);
+}
+
+.btn-Chest:hover, 
+.btn-Chest:focus {
+  color: var(--primary-dark-cyan);
+}
+
+.btn-Back:hover, 
+.btn-Back:focus {
+  color: var(--primary-very-dark-cyan);
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    padding: 30px 0;
+  }
+
+  .Arms {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .Chest {
+    border-radius: 0 0 10px 10px;
+  }
+
+  .text-style {
+    margin-bottom: 50px;
+  }
+}
+body {
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+}

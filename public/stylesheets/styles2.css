@@ -1,0 +1,171 @@
+* {
+    font-size:18px;
+    font-weight:bold;
+    flex: content;
+    margin: 2px;
+    padding: 1px;
+}
+.navbar-start{
+    border: 10px;
+    border-color: #000;
+    font-size: 50px;
+}
+.navbar-end{
+    border: 10px;
+    border-color:#0000;
+
+}
+.dropdown{
+    position: initial;
+    background-color: #eee9d9;
+}
+.dropdown-content{
+    position: relative;
+    background-color: #bdcdd6;
+}
+ul{
+    background-color: #eee9d9;
+}
+.btn-primary{
+    size: 50px;
+}
+@keyframes wipe-out-up {
+    from {
+      clip-path: inset(0 0 0 0);
+    }
+    to {
+      clip-path: inset(0 0 100% 0);
+    }
+  }
+  
+  [transition-style="out:wipe:up"] {
+    animation: 2.5s cubic-bezier(.25, 1, .30, 1) wipe-out-up both;
+  }
+h2 {
+    font-size: 18px;
+    align-content: center;
+    margin: 10%;
+}
+span{
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 10%;
+    padding: 200px;
+
+}
+body{
+    background-color: #eee9d9;
+    color: #6096b4;
+    margin: 3px;
+    
+
+}
+.card{
+    width: 500px;
+    height: 200px;
+    align-items: center;
+    border: 50%;
+    margin-left: 10%;
+    margin-top: 40px;
+    width:max-content;
+    
+}
+.card.card{
+    width: 500px;
+    height: 500px;
+    padding: 5px;
+}
+#like{
+    width: 150px;
+    height: 50px;
+}
+#like:hover:focus{
+    background-color:#93bfcf;
+    border-color: #bdcdd6;
+}
+.card-body{
+    border-color:black;
+    border-radius: 20px;
+    border: 3px;
+    size-adjust:initial;
+    border-style: solid;
+    background-color: #6096b4;
+    margin: 5px;
+    color: #bdcdd6;
+
+    
+}
+.user-icon{
+    width: 100px;
+    height: 50px;
+    position:static;
+}
+
+.card-title{
+    background-color: #6096b4;
+    color: #eee9d9;
+
+}
+
+aside.card-body myPosts{
+    margin: 10px;
+    width: 600px;
+    height: 650px;
+}
+aside.card-body landing{
+    margin: 10px;
+    width: 650px;
+    height: 300px;
+}
+.card-text{
+    margin: 5px;
+    border-radius: 10px;
+    
+}
+.btn{
+    background-color: #eee9d9;
+    color: #93bfcf;
+     
+    width: max-content;  
+}
+.btn:hover:focus{
+    background-color:#93bfcf;
+}
+.btn-primary {
+    background-color:#bdcdd6;
+    color: #6096b4;
+    border-color: #6096b4;
+    
+}
+
+.btn:hover{
+    background-color: #eee9d9;
+    color: #6096b4;
+    border-color: #bdcdd6;
+}
+
+#user-7{
+    color: #eee9d9;
+}
+.card{
+    border-color: #6096b4;
+    border: 5px;
+}
+.card.card{
+    background-color: #93bfcf;
+}
+.svg #like{
+    width: 30px;
+    height: 25px;
+    position: relative;
+}
+
+.svg #like:focus{
+    background-color: #bdcdd6;
+    color: #6096b4;
+}
+#home{
+    text-align: center;
+    font-size: 16px;
+    align-content: baseline;
+}
