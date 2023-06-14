@@ -23,7 +23,7 @@ app.get('/home', (req, res,) => {
   res.sendFile(path.join(__dirname + '/public', '/initial_page.html'));
 });
 app.get('/stats', (req, res, ) => { 
-  res.sendFile(path.join(_dirname + '/public', '/analytics.html'));
+  res.sendFile(path.join(__dirname + '/public', '/analytics.html'));
 }); 
 app.get('/landing', (req, res) => {
   res.sendFile(path.join(__dirname, '/public', '/landing.html'));
@@ -35,6 +35,10 @@ app.get('/activity', (req, res) => {
 
 app.get('/routines', (req, res) => {
   res.sendFile(path.join(__dirname, '/public', '/routines.html'));
+});
+
+app.get('/example', (req, res) => {
+  res.sendFile(path.join(__dirname, '/public', '/example.html'));
 });
 
 

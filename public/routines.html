@@ -1,42 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon-32x32.png">
-    <link rel="stylesheet" href="stylesheets/styleR.css">
-    <link rel="stylesheet" href="stylesheets/utilities.css">
     <title>Routines</title>
-  </head>
-  <body>
-    <main class="hero">
-      <section class="container">
-        <section class="card Arms">
-          <img src="img" alt="Arms">
-          <h2 class="card-title header-ff fw700 fs-2">Arms</h2>
-          <p class="text-style text-ff fw400 fs-1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium asperiores similique cum, fuga voluptate officia non vitae natus suscipit illo aspernatur repellat aliquid vel.
-          </p>
-          <a href="#"><button class="btn fs-1 fw700 btn-sedans">learn more</button></a>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.0.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./stylesheets/styles.css">
+</head>
+<body> 
+<header>
+<body>
+    <nav class="navbar-father">
+        <aside class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5">
+          <a href="#" class="flex items-center">
+              <span class="self-center text-2xl font-semibold whitespace-nowrap ">Vibes</span>
+          </a>
+          <button data-collapse-toggle="navbar-hamburger" type="button" class="inline-flex items-center p-2 ml-3 text-sm" aria-controls="navbar-hamburger" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          </button>
+          <aside class="hidden w-full" id="navbar-hamburger">
+            <ul class="flex flex-col font-medium mt-4 rounded-lg ">
+              
+<button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" class="inline-flex items-center p-2 mt-2 ml-3 text-sm rounded-lg sm:hidden">
+    <span class="sr-only">Open sidebar</span>
+    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+       <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+    </svg>
+ </button>
+ 
+ <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+    <aside class="h-full px-3 py-4 overflow-y-auto">
+       <a href="./initial_page.html" class="flex items-center pl-2.5 mb-5">
+          <span class="self-center text-xl font-semibold whitespace-nowrap ">Vibes</span>
+       </a>
+       <ul class="space-y-2 font-medium">
+          <li>
+             <a href="./initial_page.html" class="flex items-center p-2  rounded-lg ">
+                <svg aria-hidden="true" class="w-6 h-6 transition duration-75" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
+                <span class="ml-3">Home</span>
+             </a>
+          </li>
+          <li>
+             <a href="./routines.html" class="flex items-center p-2 ">
+                <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 transition duration-75" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                <span class="flex-1 ml-3 whitespace-nowrap">My Routines</span>
+                <span class="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium "></span>
+             </a>
+          </li>
+          <li>
+             <a href="./analytics.html" class="flex items-center p-2  rounded-lg">
+                <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 transition duration-75 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l2-2a1 1 0 00-1.414-1.414L11 7.586V3a1 1 0 10-2 0v4.586l-.293-.293z"></path><path d="M3 5a2 2 0 012-2h1a1 1 0 010 2H5v7h2l1 2h4l1-2h2V5h-1a1 1 0 110-2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"></path></svg>
+                <span class="flex-1 ml-3 whitespace-nowrap">Stats and Analytics</span>
+                
+             </a>
+          </li>
+          <li>
+             <a href="./landing.html" class="flex items-center p-2">
+                <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 transition duration-75 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+                <span class="flex-1 ml-3 whitespace-nowrap">Log Out</span>
+             </a>
+          </li>
+          
+       </ul>
+    </aside>
+ </aside>
+ 
+
+            </ul>
+          </aside>
+        </aside>
+      </nav>
+<section  >
+  <aside id="container-routines"class="p-4 mx-80 max-w-full">
+    <aside  class="p-4 border-2">
+       <aside  class="grid grid-cols-2 gap-4 mb-4">
+        <section >
+          <aside   class="card" style="width:fit-content height fit-content ">
+            <aside id="sedan" class="card-body">
+              <span id="sedan" >Arms</span>
+              <h5  id="sedan"class="card-title">Lorem ipsum dolor sit amet consectetur.</h5>
+              <p id="sedan" class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non sit inventore dolore nulla quaerat, consectetur explicabo, neque rem deserunt voluptatum quibusdam ut accusantium aliquid nemo! Ratione culpa magni placeat aliquid.
+              </p>
+              <button id="button-sedans" class="btn">Click Here</button>
+            </aside>
+          </aside>
+          <aside id="luxury" class="card" style="width: 20rem height 20rem">
+            <aside id="luxury" class="card-body">
+              <span id="luxury" >Shoulders</span>
+              <h5 id="luxury"class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing.</h5>
+              <p id="luxury" class="card-text">
+                received a job offer mid-course, and the subjects I learned were current, if not more so, 
+                in the company I joined. I honestly feel I got every penny’s worth.
+              
+                “ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a 
+                transition and have heard some people who had an amazing experience here. I signed up 
+                for the free intro course and found it incredibly fun! I enrolled shortly thereafter. 
+                The next 12 weeks was the best - and most grueling - time of my life. Since completing 
+                the course, I’ve successfully switched careers, working as a Software Engineer at a VR startup. ”
+              </p>
+              <button id="button-sedans" class="btn">Click Here</button>
+            </aside>
+          </aside>
+          <aside  id="suvs" class="card" style="width: 20rem height 20rem";>
+            <aside  id="suvs" class="card-body">
+              <span id="suvs"> Back</span>
+              <h5 id="suvs"  class="card-title">Verified Graduate</h5>
+              <p id="suvs" class="card-text">
+                An overall wonderful and rewarding experience
+
+                “ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good living 
+                while doing something I love. ”
+              </p>
+              <button id="button-sedans" class="btn">Click Here</button>
+            </aside>     
         </section>
-        <section class="card Chest">
-          <img src="img" alt="Chest">
-          <h2 class="card-title header-ff fw700 fs-2">Chest</h2>
-          <p class="text-style text-ff fw400 fs-1">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique at voluptatum maxime, atque dolorum quo quia explicabo dignissimos non aliquam corporis illum. Neque, voluptate.
-          </p>
-          <a href="#"><button class="btn fs-1 fw700 btn-suvs" onclick="execute('Alert.js')">learn more</button></a>
-        </section>
-        <section class="card Back">
-          <img src="img" alt="Back">
-          <h2 class="card-title header-ff fw700 fs-2">Back</h2>
-          <p class="text-style text-ff fw400 fs-1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quae doloribus, similique at voluptatum maxime, aperiam non ratione nobis vero saepe tenetur voluptatem suscipit!
-          </p>
-          <a href="#"><button class="btn fs-1 fw700 btn-luxury">learn more</button></a>
-        </section>
+       </aside>
+    </aside>
+ </aside>
+ <aside id="container-routines"class="p-4 mx-80 max-w-full">
+  <aside  class="p-4 border-2">
+     <aside  class="grid grid-cols-2 gap-4 mb-4">
+      <section >
+        <aside   class="card" style="width:fit-content height fit-content ">
+          <aside id="sedan" class="card-body">
+            <span id="sedan" >Arms</span>
+            <h5  id="sedan"class="card-title">Lorem ipsum dolor sit amet consectetur.</h5>
+            <p id="sedan" class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non sit inventore dolore nulla quaerat, consectetur explicabo, neque rem deserunt voluptatum quibusdam ut accusantium aliquid nemo! Ratione culpa magni placeat aliquid.
+            </p>
+            <button id="button-sedans" class="btn">Click Here</button>
+          </aside>
+        </aside>
+        <aside id="luxury" class="card" style="width: 20rem height 20rem">
+          <aside id="luxury" class="card-body">
+            <span id="luxury" >Shoulders</span>
+            <h5 id="luxury"class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing.</h5>
+            <p id="luxury" class="card-text">
+              received a job offer mid-course, and the subjects I learned were current, if not more so, 
+              in the company I joined. I honestly feel I got every penny’s worth.
+            
+              “ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a 
+              transition and have heard some people who had an amazing experience here. I signed up 
+              for the free intro course and found it incredibly fun! I enrolled shortly thereafter. 
+              The next 12 weeks was the best - and most grueling - time of my life. Since completing 
+              the course, I’ve successfully switched careers, working as a Software Engineer at a VR startup. ”
+            </p>
+            <button id="button-sedans" class="btn">Click Here</button>
+          </aside>
+        </aside>
+        <aside  id="suvs" class="card" style="width: 20rem height 20rem";>
+          <aside  id="suvs" class="card-body">
+            <span id="suvs"> Back</span>
+            <h5 id="suvs"  class="card-title">Verified Graduate</h5>
+            <p id="suvs" class="card-text">
+              An overall wonderful and rewarding experience
+
+              “ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good living 
+              while doing something I love. ”
+            </p>
+            <button id="button-sedans" class="btn">Click Here</button>
+          </aside>     
       </section>
-    </main>
-  </body>
+     </aside>
+  </aside>
+</aside>
+
+    
+</section>     
+</body>
 </html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>

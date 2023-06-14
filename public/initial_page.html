@@ -1,211 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
-
-  <title>Initial page VIBES</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Initial Page Vibes</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.0.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./stylesheets/styles.css">
 </head>
-
-
-<nav class="bg-white border-gray-200 dark:bg-gray-900">
-  <section class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-  <a href="https://flowbite.com/" class="flex items-center">
-      <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
-  </a>
-  <section class="flex items-center md:order-2">
-      <button type="button" class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
-        <span class="sr-only">Open user menu</span>
-        <img class="w-8 h-8 rounded-full" src="C:\Users\black\OneDrive\Escritorio\CHALLENGES HTML Y CSS\testimonials-grid-section-main\images\iconUser.jpg" alt="user photo">
-      </button>
-      <!-- Dropdown menu -->
-      <section class="z-50 hidden my-4 text-base list-none bg-white sectionide-y sectionide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:sectionide-gray-600" id="user-dropdown">
-        <section class="px-4 py-3">
-          <span class="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
-          <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span>
-        </section>
-        <ul class="py-2" aria-labelledby="user-menu-button">
-          <li>
-            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Analytics</a>
-          </li>
-          <li>
-            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
-          </li>
-          <li>
-            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Earnings</a>
-          </li>
-          <li>
-            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
-          </li>
-        </ul>
-      </section>
-      <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
-        <span class="sr-only">Open main menu</span>
-        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-    </button>
-  </section>
-  <section class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="mobile-menu-2">
-    <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-      <li>
-        <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">VIBES</a>
-      </li>
-    </ul>
-  </section>
-  </section>
-</nav>
-
-
-<button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar" type="button" class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
-  <span class="sr-only">Open sidebar</span>
-  <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-     <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
-  </svg>
-</button>
-
-<aside id="default-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
-  <section class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
-     <ul class="space-y-2 font-medium">
-        <li>
-           <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-              <svg aria-hidden="true" class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
-              <span class="ml-3">Analytics</span>
-           </a>
-        </li>
-        <li>
-           <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-              <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
-              <span class="flex-1 ml-3 whitespace-nowrap">My routines</span>
-              <span class="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium text-gray-800 bg-gray-200 rounded-full dark:bg-gray-700 dark:text-gray-300">Pro</span>
-           </a>
-        </li>
-        <li>
-           <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-              <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l2-2a1 1 0 00-1.414-1.414L11 7.586V3a1 1 0 10-2 0v4.586l-.293-.293z"></path><path d="M3 5a2 2 0 012-2h1a1 1 0 010 2H5v7h2l1 2h4l1-2h2V5h-1a1 1 0 110-2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"></path></svg>
-              <span class="flex-1 ml-3 whitespace-nowrap">My posts</span>
-              <span class="inline-flex items-center justify-center w-3 h-3 p-3 ml-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">3</span>
-           </a>
-        </li>
-        <li>
-           <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-              <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd"></path></svg>
-              <span class="flex-1 ml-3 whitespace-nowrap">LOG OUT</span>
-           </a>
-        </li>
-     </ul>
-  </section>
-</aside>
-
-
+<body> 
+<header>
 <body>
-  <section class="MAIN">
-    <section class="tarjetaDaniel">
-    <section class="tituloDaniel">
-      <img src="#" alt="">
-      Daniel Clifford
-    </section>
-      <section class="tituloDaniel2">
-        Verified Graduate
-      </section>
-    <section class="cuerpoDaniel">
+    <nav class="navbar-father">
+        <aside class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5">
+          <a href="#" class="flex items-center">
+              <span class="self-center text-2xl font-semibold whitespace-nowrap ">Vibes</span>
+          </a>
+          <button data-collapse-toggle="navbar-hamburger" type="button" class="inline-flex items-center p-2 ml-3 text-sm" aria-controls="navbar-hamburger" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          </button>
+          <aside class="hidden w-full" id="navbar-hamburger">
+            <ul class="flex flex-col font-medium mt-4 rounded-lg ">
+              
+<button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" class="inline-flex items-center p-2 mt-2 ml-3 text-sm rounded-lg sm:hidden">
+    <span class="sr-only">Open sidebar</span>
+    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+       <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+    </svg>
+ </button>
+ 
+ <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+    <aside class="h-full px-3 py-4 overflow-y-auto">
+       <a href="./initial_page.html" class="flex items-center pl-2.5 mb-5">
+          <span class="self-center text-xl font-semibold whitespace-nowrap ">Vibes</span>
+       </a>
+       <ul class="space-y-2 font-medium">
+          <li>
+             <a href="./initial_page.html" class="flex items-center p-2  rounded-lg ">
+                <svg aria-hidden="true" class="w-6 h-6 transition duration-75" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
+                <span class="ml-3">Home</span>
+             </a>
+          </li>
+          <li>
+             <a href="./routines.html" class="flex items-center p-2 ">
+                <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 transition duration-75" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                <span class="flex-1 ml-3 whitespace-nowrap">My Routines</span>
+                <span class="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium "></span>
+             </a>
+          </li>
+          <li>
+             <a href="./analytics.html" class="flex items-center p-2  rounded-lg">
+                <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 transition duration-75 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l2-2a1 1 0 00-1.414-1.414L11 7.586V3a1 1 0 10-2 0v4.586l-.293-.293z"></path><path d="M3 5a2 2 0 012-2h1a1 1 0 010 2H5v7h2l1 2h4l1-2h2V5h-1a1 1 0 110-2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"></path></svg>
+                <span class="flex-1 ml-3 whitespace-nowrap">Stats and Analytics</span>
+                
+             </a>
+          </li>
+          <li>
+             <a href="./landing.html" class="flex items-center p-2">
+                <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 transition duration-75 " fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+                <span class="flex-1 ml-3 whitespace-nowrap">Log Out</span>
+             </a>
+          </li>
+          
+       </ul>
+    </aside>
+ </aside>
+ 
+
+            </ul>
+          </aside>
+        </aside>
+      </nav>
+<section>
+  <aside id="main" class="p-4 mx-80 max-w-full">
+    <aside  class="p-4 border-2">
+       <aside class="grid grid-cols-3 gap-4 mb-4">
+        <section >
+          <aside class="card" style="width:fit-content height fit-content ">
+            <aside id="Daniel-card"   class="card-body">
+              <span id="titulo-Daniel"> Daniel Clifford</span>
+              <h5 id="titulo-Daniel2" class="card-title">The team was very supportive and kept me motivated</h5>
+              <p id="cuerpoDaniel"  class="card-text">
+                “ I started as a total newbie with virtually no coding skills. I now work as a mobile engineer 
+                  for a big company. This was one of the best investments I’ve made in myself. ”
+              </p>
+              <script   type="module" src="https://unpkg.com/@splinetool/viewer@0.9.366/build/spline-viewer.js"></script>
+              <spline-viewer url="https://prod.spline.design/1FPZpgZ7JQuykfmE/scene.splinecode"></spline-viewer>
+
+            </aside>
+          </aside>
+          <aside class="card" style="width: 20rem height 20rem">
+            <aside id="tarjetaJona" class="card-body">
+              <span id="tituloJona"> Jonathan Walters</span>
+              <h5 id="tituloJona2" class="card-title">Verified Graduate</h5>
+              <p id="cuerpoJona" class="card-text">
+                received a job offer mid-course, and the subjects I learned were current, if not more so, 
+                in the company I joined. I honestly feel I got every penny’s worth.
+              
+                “ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a 
+                transition and have heard some people who had an amazing experience here. I signed up 
+                for the free intro course and found it incredibly fun! I enrolled shortly thereafter. 
+                The next 12 weeks was the best - and most grueling - time of my life. Since completing 
+                the course, I’ve successfully switched careers, working as a Software Engineer at a VR startup. ”
+              </p>
+              <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.366/build/spline-viewer.js"></script>
+              <spline-viewer url="https://prod.spline.design/YnBe6Tai1WbEl9-W/scene.splinecode"></spline-viewer>
+            </aside>
+          </aside>
+          <aside class="card" style="width: 20rem height 20rem";>
+            <aside id="tarjetaJaen" class="card-body">
+              <span id="tituloJaen"> Jeanette Harmon</span>
+              <h5 id="tituloJaen2" class="card-title">Verified Graduate</h5>
+              <p id="cuerpoJaen" class="card-text">
+                An overall wonderful and rewarding experience
+
+                “ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good living 
+                while doing something I love. ”
+              </p>
+              <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.366/build/spline-viewer.js"></script>
+              <spline-viewer url="https://prod.spline.design/YnBe6Tai1WbEl9-W/scene.splinecode"></spline-viewer>
+            </aside>     
+        </section>
+       </aside>
+    </aside>
+ </aside>
+
+  <aside class="p-4 mx-80 max-w-full">
+    <aside class="p-4 border-2">
+       <aside class="grid grid-cols-3 gap-4 mb-4">
+        <section >
+          <aside class="card" style="width: 20rem height 20rem">
+            <aside id="tarjetaPatrick" class="card-body">
+              <span id="tituloPatrick">  Patrick Abrams</span>
+              <h5 id="tituloPatrick2" class="card-title">Verified Graduate</h5>
+              <p id="cuerpoPatrick" class="card-text">
+                Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from them and 
+                learning from their experiences was easy.
     
-      The team was very supportive and kept me motivated
+                “ The staff seem genuinely concerned about my progress which I find really refreshing. The program 
+                gave me the confidence necessary to be able to go out in the world and present myself as a capable 
+                junior developer. The standard is above the rest. You will get the personal attention you need from 
+                an incredible community of smart and amazing people. ”
+              </p>
+              <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.366/build/spline-viewer.js"></script>
+              <spline-viewer url="https://prod.spline.design/YnBe6Tai1WbEl9-W/scene.splinecode"></spline-viewer>
+            </aside>
+          </aside>
+          <aside class="card" style="width: 20rem height 20rem";>
+            <aside id="tarjetaKira" class="card-body">
+              <span id="tituloKira"> Kira Whittle</span>
+              <h5 id="tituloKira2" class="card-title">Verified Graduate</h5>
+              <p id="cuerpoKira" class="card-text">
+                Such a life-changing experience. Highly recommended!
 
-      “ I started as a total newbie with virtually no coding skills. I now work as a mobile engineer 
-      for a big company. This was one of the best investments I’ve made in myself. ”
-    </section>
-  </section>
-
-    <section class="tarjetaJona">
-      <section class="tituloJona">
-        <img src="#" alt="">
-        Jonathan Walters
-      </section>
-        <section class="tituloJona2">
-          Verified Graduate
+                “ Before joining the bootcamp, I’ve never written a line of code. I needed some structure from 
+                professionals who can help me learn programming step by step. I was encouraged to enroll by a former 
+                student of theirs who can only say wonderful things about the program. The entire curriculum and staff 
+                did not disappoint. They were very hands-on and I never had to wait long for assistance. The agile team 
+                project, in particular, was outstanding. It took my learning to the next level in a way that no tutorial 
+                could ever have. In fact, I’ve often referred to it during interviews as an example of my developent 
+                experience. It certainly helped me land a job as a full-stack developer after receiving multiple offers. 
+                100% recommend! ”
+              </p>
+              <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.366/build/spline-viewer.js"></script>
+              <spline-viewer url="https://prod.spline.design/YnBe6Tai1WbEl9-W/scene.splinecode"></spline-viewer>
+            </aside>     
         </section>
-      <section class="cuerpoJona">
-      
-      I received a job offer mid-course, and the subjects I learned were current, if not more so, 
-      in the company I joined. I honestly feel I got every penny’s worth.
+       </aside>
+    </aside>
+ </aside>
     
-      “ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a 
-      transition and have heard some people who had an amazing experience here. I signed up 
-      for the free intro course and found it incredibly fun! I enrolled shortly thereafter. 
-      The next 12 weeks was the best - and most grueling - time of my life. Since completing 
-      the course, I’ve successfully switched careers, working as a Software Engineer at a VR startup. ”
-      </section>
-      </section>
-
-      <section class="tarjetaJean">
-        <section class="tituloJean">
-          <img src="#" alt="">
-          Jeanette Harmon
-        </section>
-          <section class="tituloJean2">
-            Verified Graduate
-          </section>
-        <section class="cuerpoJean">
-          An overall wonderful and rewarding experience
-
-          “ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good living 
-          while doing something I love. ”
-        </section>
-        </section>
-
-        <section class="tarjetaPatrick">
-          <section class="tituloPatrick">
-            <img src="#" alt="">
-            Patrick Abrams
-          </section>
-            <section class="tituloPatrick2">
-              Verified Graduate
-            </section>
-          <section class="cuerpoPatrick">
-            Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from them and 
-            learning from their experiences was easy.
-
-            “ The staff seem genuinely concerned about my progress which I find really refreshing. The program 
-            gave me the confidence necessary to be able to go out in the world and present myself as a capable 
-            junior developer. The standard is above the rest. You will get the personal attention you need from 
-            an incredible community of smart and amazing people. ”
-          </section>
-          </section>
-
-          <section class="tarjetaKira">
-            <section class="tituloKira">
-              <img src="#" alt="">
-              Kira Whittle
-            </section>
-              <section class="tituloKira2">
-                Verified Graduate
-              </section>
-            <section class="cuerpoKira">
-              Such a life-changing experience. Highly recommended!
-
-              “ Before joining the bootcamp, I’ve never written a line of code. I needed some structure from 
-              professionals who can help me learn programming step by step. I was encouraged to enroll by a former 
-              student of theirs who can only say wonderful things about the program. The entire curriculum and staff 
-              did not disappoint. They were very hands-on and I never had to wait long for assistance. The agile team 
-              project, in particular, was outstanding. It took my learning to the next level in a way that no tutorial 
-              could ever have. In fact, I’ve often referred to it during interviews as an example of my developent 
-              experience. It certainly helped me land a job as a full-stack developer after receiving multiple offers. 
-              100% recommend! ”
-            </section>
-            </section>
-          </section>
-
+</section>     
 </body>
 </html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
 <script src="https://cdn.tailwindcss.com"></script>
