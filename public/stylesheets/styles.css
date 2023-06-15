@@ -297,3 +297,53 @@ body {
   border: 10px;
   border-color: #27374D;
 }
+#anlayticsCard{
+  background-color: #434446;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  width:420px;
+  border: 1px solid lightgray;
+  box-shadow: 2px 2px 8px 4px #d3d3d3d1;
+  border-radius:15px;
+  font-family: sans-serif;
+  
+  grid-column: 3/ span 4;
+}
+#body-analytics-card{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  width:420px;
+  border: 1px solid lightgray;
+  box-shadow: 2px 2px 8px 4px #d3d3d3d1;
+  border-radius:15px;
+  font-family: sans-serif;
+  background-color:#27374D;
+  grid-column: 3/ span 4;
+}
+#anlayticsCard-tittle{
+  font-size: 18px;
+  padding: 10px 10px 0 10px;
+  background-color: #27374D;
+  color: #DDE6ED;
+}
+#anlayticsCard-text{
+  font-size: 18px;
+  padding: 10px 10px 0 10px;
+  background-color: #27374D;
+  color: #DDE6ED;
+}
+#button-analytics{
+  border: 1px solid var(--neutral-very-light-gray);
+  background: none;
+  text-transform: capitalize;
+  padding: 15px 30px;
+  border-radius: 100px;
+  transition: background 300ms ease-in-out;
+}
+#analytics--card{
+  font-size: 18px;
+  padding: 10px 10px 0 10px;
+  background-color: #27374D;
+}

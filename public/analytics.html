@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Analytics and Stats</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.min.js" integrity="sha512-mlz/Fs1VtBou2TrUkGzX4VoGvybkD9nkeXWJm3rle0DPHssYYx4j+8kIS15T78ttGfmOjH0lLaBXGcShaVkdkg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.0.0/dist/full.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="./stylesheets/styles.css">
 </head>
@@ -65,70 +66,135 @@
        </ul>
     </aside>
  </aside>
+
  
- <aside class="p-4 sm:ml-64">
-    <aside class="p-4 border-2">
-       <aside class="grid grid-cols-3 gap-4 mb-4">
-        <section >
-          <aside class="card" style="width:fit-content height fit-content ">
-            <aside class="card-body">
-              <h5 class="card-title">Frequency of time</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Show Frequency</a>
-            </aside>
-          </aside>
-          <aside class="card" style="width: 20rem height 20rem">
-            <aside class="card-body">
-              <h5 class="card-title">Time of usage</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Show Time of Usage</a>
-            </aside>
-          </aside>
-          <aside class="card" style="width: 20rem height 20rem";>
-            <aside class="card-body">
-              <h5 class="card-title">Level</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Show Used Levels</a>
-            </aside>     
-        </section>
-       </aside>
+      </ul>
     </aside>
- </aside>
- 
-            </ul>
-          </aside>
-        </aside>
-      </nav>
+    </aside>
+  </nav>
 <section>
-  <aside class="p-4 sm:ml-64">
-    <aside class="p-4 border-2">
-       <aside class="grid grid-cols-3 gap-4 mb-4">
+  <aside  class="p-4 sm:ml-64">
+    <aside   class="p-4 border-2">
+       <aside   class="grid grid-cols-3 gap-4 mb-4">
         <section >
-          <aside class="card" style="width:fit-content height fit-content ">
-            <aside class="card-body">
-              <h5 class="card-title">Frequency of time</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Show Frequency</a>
+          <aside  id="anlayticsCard"  class="card" style="width:fit-content height fit-content ">
+            <aside id="body-analytics-card" class="card-body">
+              <h5 id="anlayticsCard-tittle" class="card-title">Frequency of time</h5>
+              <p id="anlayticsCard-text"  class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a  id="button-analytics" href="#" class="btn btn-primary">Show Frequency</a>
+              <div>
+                <canvas id="myChart"></canvas>
+              </div>
+              
+              <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+              
+              <script>
+                const ctx = document.getElementById('myChart');
+              
+                new Chart(ctx, {
+                  type: 'bar',
+                  data: {
+                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                    datasets: [{
+                      label: '# of Votes',
+                      data: [12, 19, 3, 5, 2, 3],
+                      borderWidth: 1
+                    }]
+                  },
+                  options: {
+                    scales: {
+                      y: {
+                        beginAtZero: true
+                      }
+                    }
+                  }
+                });
+              </script>
+              
             </aside>
           </aside>
-          <aside class="card" style="width: 20rem height 20rem">
-            <aside class="card-body">
-              <h5 class="card-title">Time of usage</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Show Time of Usage</a>
+          <aside id="anlayticsCard" class="card" style="width: 20rem height 20rem">
+            <aside id="body-analytics-card" class="card-body">
+              <h5 id="anlayticsCard-tittle" class="card-title">Time of usage</h5>
+              <p id="anlayticsCard-text" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <div>
+                <canvas id="myChart"></canvas>
+              </div>
+              
+              <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+              
+              <script>
+                const time_usage = document.getElementById('myChart');
+              
+                new Chart(time_usage, {
+                  type: 'bar',
+                  data: {
+                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                    datasets: [{
+                      label: '# of Votes',
+                      data: [12, 19, 3, 5, 2, 3],
+                      borderWidth: 1
+                    }]
+                  },
+                  options: {
+                    scales: {
+                      y: {
+                        beginAtZero: true
+                      }
+                    }
+                  }
+                });
+              </script>
+              
             </aside>
           </aside>
-          <aside class="card" style="width: 20rem height 20rem";>
-            <aside class="card-body">
-              <h5 class="card-title">Level</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Show Used Levels</a>
+          <aside  id="anlayticsCard" class="card" style="width: 20rem height 20rem";>
+            <aside  id="body-analytics-card" class="card-body">
+              <h5 id="anlayticsCard-tittle" class="card-title">Level</h5>
+              <p id="anlayticsCard-text" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a id="button-analytics" href="#" class="btn btn-primary">Show Used Levels</a>
+              <div>
+                <canvas id="myChart"></canvas>
+              </div>
+              
+              <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+              
+              <script>
+                const intensity = document.getElementById('myChart');
+              
+                new Chart(intensity, {
+                  type: 'bar',
+                  data: {
+                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                    datasets: [{
+                      label: '# of Votes',
+                      data: [12, 19, 3, 5, 2, 3],
+                      borderWidth: 1
+                    }]
+                  },
+                  options: {
+                    scales: {
+                      y: {
+                        beginAtZero: true
+                      }
+                    }
+                  }
+                });
+              </script>
+              
+            
+            
             </aside>     
         </section>
        </aside>
     </aside>
  </aside>
 </section>     
+
+  
+
+
+
 </body>
 </html>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
