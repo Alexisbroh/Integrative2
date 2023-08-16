@@ -8,11 +8,13 @@ html(lang="en")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.min.js", integrity="sha512-mlz/Fs1VtBou2TrUkGzX4VoGvybkD9nkeXWJm3rle0DPHssYYx4j+8kIS15T78ttGfmOjH0lLaBXGcShaVkdkg==", crossorigin="anonymous", referrerpolicy="no-referrer")
     link(href="https://cdn.jsdelivr.net/npm/daisyui@3.0.0/dist/full.css", rel="stylesheet", type="text/css")
     link(rel="stylesheet", href="./stylesheets/styles.css")
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.css" rel="stylesheet" />
+
   body
     nav.navbar-father
       aside.max-w-screen-xl.flex.flex-wrap.items-center.justify-between.mx-auto.p-5
-        a(href="#", class="flex items-center")
-          span.self-center.text-2xl.font-semibold.whitespace-nowrap Vibe
+        a(href="/initial_page", class="flex items-center")
+          span.self-center.text-2xl.font-semibold.whitespace-nowrap Vibes
         button(data-collapse-toggle="navbar-hamburger", type="button", class="inline-flex items-center p-2 ml-3 text-sm", aria-controls="navbar-hamburger", aria-expanded="false")
           span.sr-only Open main menu
           svg.w-6.h-6(aria-hidden="true", fill="currentColor", viewBox="0 0 20 20", xmlns="http://www.w3.org/2000/svg")
@@ -145,3 +147,6 @@ html(lang="en")
                       }
                     }
                   });
+
+script(src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js")
+  script(src="https://cdn.tailwindcss.com")

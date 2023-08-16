@@ -349,11 +349,12 @@ body {
 }
 #btn-mas{
   display: none;
+  right: 1220px;
 }
 .btn_post{
   position: fixed;
   bottom: 20px;
-  right: -1190px;
+  right: 5000px;
 }
 .new_post a, .icon-mas2{
   display: block;
@@ -368,6 +369,7 @@ body {
   box-shadow: 0px 1px 10px rgba(0,0,0,0.4);
   transition: all 500ms ease;
   margin: 15px;
+  right: 70px;
 }
 .new_post a:hover{
   background: #fff;
