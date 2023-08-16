@@ -1,0 +1,92 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Routines
+    link(href="https://cdn.jsdelivr.net/npm/daisyui@3.0.0/dist/full.css", rel="stylesheet", type="text/css")
+    link(rel="stylesheet", href="./stylesheets/styles.css")
+  body
+    nav.navbar-father
+      aside.max-w-screen-xl.flex.flex-wrap.items-center.justify-between.mx-auto.p-5
+        a(href="#", class="flex items-center")
+          span.self-center.text-2xl.font-semibold.whitespace-nowrap VIBES
+        button(data-collapse-toggle="navbar-hamburger", type="button", class="inline-flex items-center p-2 ml-3 text-sm", aria-controls="navbar-hamburger", aria-expanded="false")
+          span.sr-only Open main menu
+          svg.w-6.h-6(aria-hidden="true", fill="currentColor", viewBox="0 0 20 20", xmlns="http://www.w3.org/2000/svg")
+            path(fill-rule="evenodd", d="M3 5a1 1 0 011-1h16a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h16a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h16a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd")
+        aside.hidden.w-full(id="navbar-hamburger")
+          ul.flex.flex-col.font-medium.mt-4.rounded-lg
+            button(data-drawer-target="logo-sidebar", data-drawer-toggle="logo-sidebar", aria-controls="logo-sidebar", type="button", class="inline-flex items-center p-2 mt-2 ml-3 text-sm rounded-lg sm:hidden")
+              span.sr-only Open sidebar
+              svg.w-6.h-6(aria-hidden="true", fill="currentColor", viewBox="0 0 20 20", xmlns="http://www.w3.org/2000/svg")
+                path(clip-rule="evenodd", fill-rule="evenodd", d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z")
+            aside#logo-sidebar.fixed.top-0.left-0.z-40.w-64.h-screen.transition-transform.-translate-x-full.sm-translate-x-0(aria-label="Sidebar")
+              aside.h-full.px-3.py-4.overflow-y-auto
+                a(href="./initial_page.html", class="flex items-center pl-2.5 mb-5")
+                  span.self-center.text-xl.font-semibold.whitespace-nowrap VIBES
+                ul.space-y-2.font-medium
+                  li
+                    a(href="./initial_page.html", class="flex items-center p-2  rounded-lg")
+                      svg(aria-hidden="true", class="w-6 h-6 transition duration-75", fill="currentColor", viewBox="0 0 20 20", xmlns="http://www.w3.org/2000/svg")
+                        path(d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z")
+                        path(d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z")
+                      span.ml-3 Home
+                  li
+                    a(href="./routines.html", class="flex items-center p-2")
+                      svg(aria-hidden="true", class="flex-shrink-0 w-6 h-6 transition duration-75", fill="currentColor", viewBox="0 0 20 20", xmlns="http://www.w3.org/2000/svg")
+                        path(d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012 2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z")
+                      span.flex-1.ml-3.whitespace-nowrap My Routines
+                      span.inline-flex.items-center.justify-center.px-2.ml-3.text-sm.font-medium
+                  li
+                    a(href="./analytics.html", class="flex items-center p-2  rounded-lg")
+                      svg(aria-hidden="true", class="flex-shrink-0 w-6 h-6 transition duration-75", fill="currentColor", viewBox="0 0 20 20", xmlns="http://www.w3.org/2000/svg")
+                        path(d="M8.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l2-2a1 1 0 00-1.414-1.414L11 7.586V3a1 1 0 10-2 0v4.586l-.293-.293z")
+                        path(d="M3 5a2 2 0 012-2h1a1 1 0 010 2H5v7h2l1 2h4l1-2h2V5h-1a1 1 0 110-2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z")
+                      span.flex-1.ml-3.whitespace-nowrap Stats and Analytics
+                  li
+                    a(href="./landing.html", class="flex items-center p-2")
+                      svg(aria-hidden="true", class="flex-shrink-0 w-6 h-6 transition duration-75", fill="currentColor", viewBox="0 0 20 20", xmlns="http://www.w3.org/2000/svg")
+                        path(fill-rule="evenodd", d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z", clip-rule="evenodd")
+                      span.flex-1.ml-3.whitespace-nowrap Log Out
+    section
+      aside#container-routines.p-4.mx-80.max-w-full
+        aside.p-4.border-2
+          aside.grid.grid-cols-2.gap-4.mb-4
+            section
+              aside.card(style="width:fit-content height fit-content ")
+                aside#sedan.card-body
+                  span#sedan Arms
+                  h5#sedan.card-title Lorem ipsum dolor sit amet consectetur.
+                  p#sedan.card-text
+                    | Lorem ipsum dolor sit amet consectetur adipisicing elit. Non sit inventore dolore nulla quaerat, consectetur explicabo, neque rem deserunt voluptatum quibusdam ut accusantium aliquid nemo! Ratione culpa magni placeat aliquid.
+                  button#button-sedans.btn Click Here
+              aside#luxury.card(style="width: 20rem height 20rem")
+                aside#luxury.card-body
+                  span#luxury Shoulders
+                  h5#luxury.card-title Lorem ipsum dolor sit amet consectetur adipisicing.
+                  p#luxury.card-text
+                    | received a job offer mid-course, and the subjects I learned were current, if not more so,
+                    | in the company I joined. I honestly feel I got every penny’s worth.
+                    |
+                    | “ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a
+                    | transition and have heard some people who had an amazing experience here. I signed up
+                    | for the free intro course and found it incredibly fun! I enrolled shortly thereafter.
+                    | The next 12 weeks was the best - and most grueling - time of my life. Since completing
+                    | the course, I’ve successfully switched careers, working as a Software Engineer at a VR startup. ”
+                  button#button-sedans.btn Click Here
+              aside#suvs.card(style="width: 20rem height 20rem")
+                aside#suvs.card-body
+                  span#suvs Back
+                  h5#suvs.card-title Verified Graduate
+                  p#suvs.card-text
+                    | An overall wonderful and rewarding experience
+                    |
+                    | “ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good living
+                    | while doing something I love. ”
+                  button#button-sedans.btn Click Here
+            section
+              // Repite la estructura de cards para la segunda sección
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js")
+    script(src="https://cdn.tailwindcss.com")

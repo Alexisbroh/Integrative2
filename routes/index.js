@@ -1,98 +1,87 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 const passport = require('passport');
 const myPosts = require('../models/myPosts');
 
-
-
-/* GET home page. */
-
-router.get('/', (req, res,) => { 
-  res.render('index')
+// GET home page.
+router.get('/', (req, res) => {
+  res.render('index');
 });
-router.get('/initial_page',isAuthenticated, (req, res,) => { 
+
+router.get('/initial_page', isAuthenticated, (req, res) => {
   res.render('initial_page');
 });
-router.get('/analytics',isAuthenticated, (req, res, ) => { 
-  res.render('analytics');
-}); 
-//router.get('/landing', (req, res) => {
-  //res.render('landing');
-//});
 
-router.get('/my_posts',isAuthenticated, (req, res) => {
+router.get('/analytics', isAuthenticated, (req, res) => {
+  res.render('analytics');
+});
+
+router.get('/my_posts', isAuthenticated, (req, res) => {
   res.render('my_posts');
 });
 
-router.get('/routines',isAuthenticated, (req, res) => {
+router.get('/routines', isAuthenticated, (req, res) => {
   res.render('routines');
 });
 
-router.get('/example',isAuthenticated, (req, res) => {
+router.get('/example', isAuthenticated, (req, res) => {
   res.render('example');
 });
 
-router.get('/newPost',isAuthenticated, (req, res) => {
+router.get('/newPost', isAuthenticated, (req, res) => {
   res.render('newPost');
 });
 
-
-//Render de la vista login
+// Render de la vista login
 router.get('/login', (req, res) => {
   res.render('login');
 });
 
-//POST Login
+// POST Login
 router.post('/login', passport.authenticate('local-signin', {
   successRedirect: '/initial_page',
   failureRedirect: '/login',
   failureFlash: true
 }));
 
-
-//Renderiza form de Sign Up
+// Renderiza form de Sign Up
 router.get('/signUp', (req, res) => {
   res.render('signUp');
 });
 
-
-//POST Sign Up
-router.post('/signUp', passport.authenticate('local-signup',{
+// POST Sign Up
+router.post('/signUp', passport.authenticate('local-signup', {
   successRedirect: '/',
   failureRedirect: '/signUp',
   failureFlash: true
 }));
 
-router.get("/logout", (req, res) => {
+router.get('/logout', (req, res) => {
   req.logout(req.user, err => {
-    if(err) return next(err);
-    res.redirect("/index");
+    if (err) return next(err);
+    res.redirect('/index');
   });
 });
 
 function isAuthenticated(req, res, next) {
-  if(req.isAuthenticated()) {
+  if (req.isAuthenticated()) {
     return next();
   }
   res.redirect('/index');
 }
 
-
-
-//POSTS BACKEND
-
+// POSTS BACKEND
 
 router.post('/newPost', async function (req, res, next) {
-  const { name_user, date, title, post } = req.body; // Obtener los datos del formulario
+  const { name_user, title, post, date } = req.body; // Obtener los datos del formulario
 
   try {
-
     // Crear un nuevo objeto de usuario y asignar los valores
-    const newPost = new Posts({
+    const newPost = new myPosts({
       name_user,
-      date,
       title,
-      post
+      post,
+      date
     });
 
     // Guardar el nuevo usuario en la base de datos
@@ -107,16 +96,15 @@ router.post('/newPost', async function (req, res, next) {
   }
 });
 
-router.get('/initial_page', async function(req, res, next) {
+router.get('/initial_page', async function (req, res, next) {
   try {
     const posts = await myPosts.find(); // Obtener los datos de la base de datos
     console.log(posts); // Asegúrate de que obtienes los datos correctamente en la consola
-    res.render('initial_page', { post:newPost }); // Pasar los datos a la plantilla EJS
+    res.render('initial_page', { posts }); // Pasar los datos a la plantilla Pug
   } catch (error) {
     console.error(error);
     res.redirect('/initial_page'); // Redireccionar en caso de error
   }
 });
 
- 
 module.exports = router;
