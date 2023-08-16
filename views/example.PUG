@@ -1,0 +1,83 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css", rel="stylesheet")
+    link(rel="stylesheet", href="stylesheets/styles.css")
+    title Document
+  body
+    nav.navbar-father
+      aside.max-w-screen-xl.flex.flex-wrap.items-center.justify-between.mx-auto.p-5
+        a(href="/initial_page", class="flex items-center")
+          span.self-center.text-2xl.font-semibold.whitespace-nowrap Vibes
+        button(data-collapse-toggle="navbar-hamburger", type="button", class="inline-flex items-center p-2 ml-3 text-sm", aria-controls="navbar-hamburger", aria-expanded="false")
+          span.sr-only Open main menu
+          svg.w-6.h-6(aria-hidden="true", fill="currentColor", viewBox="0 0 20 20", xmlns="http://www.w3.org/2000/svg")
+            path(fill-rule="evenodd", d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd")
+        aside.hidden.w-full#navbar-hamburger
+          ul.flex.flex-col.font-medium.mt-4.rounded-lg
+            li
+              button(data-drawer-target="logo-sidebar", data-drawer-toggle="logo-sidebar", aria-controls="logo-sidebar", type="button", class="inline-flex items-center p-2 mt-2 ml-3 text-sm rounded-lg sm:hidden")
+                span.sr-only Open sidebar
+                svg.w-6.h-6(aria-hidden="true", fill="currentColor", viewBox="0 0 20 20", xmlns="http://www.w3.org/2000/svg")
+                  path(clip-rule="evenodd", fill-rule="evenodd", d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z")
+            aside#logo-sidebar.fixed.top-0.left-0.z-40.w-64.h-screen.transition-transform.-translate-x-full.sm\:translate-x-0(aria-label="Sidebar")
+              aside.h-full.px-3.py-4.overflow-y-auto
+                a(href="/initial_page", class="flex items-center pl-2.5 mb-5")
+                  span.self-center.text-xl.font-semibold.whitespace-nowrap Vibes
+                ul.space-y-2.font-medium
+                  li
+                    a(href="/initial_page", class="flex items-center p-2  rounded-lg ")
+                      svg(aria-hidden="true", class="w-6 h-6 transition duration-75", fill="currentColor", viewBox="0 0 20 20", xmlns="http://www.w3.org/2000/svg")
+                        path(d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z")
+                        path(d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z")
+                      span.ml-3 Home
+                  li
+                    a(href="/routines", class="flex items-center p-2 ")
+                      svg(aria-hidden="true", class="flex-shrink-0 w-6 h-6 transition duration-75", fill="currentColor", viewBox="0 0 20 20", xmlns="http://www.w3.org/2000/svg")
+                        path(d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z")
+                      span.flex-1.ml-3.whitespace-nowrap My Routines
+                  li
+                    a(href="/analytics", class="flex items-center p-2  rounded-lg")
+                      svg(aria-hidden="true", class="flex-shrink-0 w-6 h-6 transition duration-75 ", fill="currentColor", viewBox="0 0 20 20", xmlns="http://www.w3.org/2000/svg")
+                        path(d="M8.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l2-2a1 1 0 00-1.414-1.414L11 7.586V3a1 1 0 10-2 0v4.586l-.293-.293z")
+                        path(d="M3 5a2 2 0 012-2h1a1 1 0 010 2H5v7h2l1 2h4l1-2h2V5h-1a1 1 0 110-2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z")
+                      span.flex-1.ml-3.whitespace-nowrap Stats and Analytics
+                  li
+                    a(href="/landing", class="flex items-center p-2")
+                      svg(aria-hidden="true", class="flex-shrink-0 w-6 h-6 transition duration-75 ", fill="currentColor", viewBox="0 0 20 20", xmlns="http://www.w3.org/2000/svg")
+                        path(fill-rule="evenodd", d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z", clip-rule="evenodd")
+                      span.flex-1.ml-3.whitespace-nowrap Log Out
+    aside.p-4.sm\:ml-64
+      aside.p-4.border-2
+        aside.grid.grid-cols-3.gap-4.mb-4
+          aside.flex.items-center.justify-center.h-24.rounded
+            p.text-2xl +
+          aside.flex.items-center.justify-center.h-24.rounded
+            p.text-2xl +
+          aside.flex.items-center.justify-center.h-24.rounded
+            p.text-2xl +
+        aside.flex.items-center.justify-center.h-48.mb-4.rounded
+          p.text-2xl +
+        aside.grid.grid-cols-2.gap-4.mb-4
+          aside.flex.items-center.justify-center.rounded
+            p.text-2xl +
+          aside.flex.items-center.justify-center.rounded
+            p.text-2xl +
+          aside.flex.items-center.justify-center.rounded
+            p.text-2xl +
+          aside.flex.items-center.justify-center.rounded
+            p.text-2xl +
+        aside.flex.items-center.justify-center.h-48.mb-4.rounded
+          p.text-2xl +
+        aside.grid.grid-cols-2.gap-4
+          aside.flex.items-center.justify-center.rounded
+            p.text-2xl +
+          aside.flex.items-center.justify-center.rounded
+            p.text-2xl +
+          aside.flex.items-center.justify-center.rounded
+            p.text-2xl +
+          aside.flex.items-center.justify-center.rounded
+            p.text-2xl +
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js")

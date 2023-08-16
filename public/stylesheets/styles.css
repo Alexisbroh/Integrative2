@@ -347,4 +347,41 @@ body {
   padding: 10px 10px 0 10px;
   background-color: #27374D;
 }
-
+#btn-mas{
+  display: none;
+  right: 1220px;
+}
+.btn_post{
+  position: fixed;
+  bottom: 20px;
+  right: 5000px;
+}
+.new_post a, .icon-mas2{
+  display: block;
+  text-decoration: none;
+  background: #23A4CA;
+  color: #fff;
+  width: 80px;
+  height: 80px;
+  line-height: 100px;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0px 1px 10px rgba(0,0,0,0.4);
+  transition: all 500ms ease;
+  margin: 15px;
+  right: 70px;
+}
+.new_post a:hover{
+  background: #fff;
+  color: #23A4CA;
+}
+.new_post a{
+  margin: -15px;
+  opacity: 0;
+  visibility: hidden;
+}
+#btn-mas:checked~ .new_post a{
+  margin-bottom: 10px;
+  opacity: 1;
+  visibility: visible;
+}
