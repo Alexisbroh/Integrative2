@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const passport = require('passport');
 const myPosts = require('../models/myPosts');
+const Timer = require('../models/timer')
 
 // GET home page.
 router.get('/', (req, res) => {
@@ -106,5 +107,17 @@ router.get('/initial_page', async function (req, res, next) {
     res.redirect('/initial_page'); // Redireccionar en caso de error
   }
 });
+
+
+router.get('/analytics',isAuthenticated, async function(req, res, next) {
+  try {
+    const timers = await Timer.find(); // Obtener todos los usuarios de la base de datos
+    res.render('analytics', { timers }); // Renderizar la vista 'users' y pasar los usuarios como datos
+  } catch (error) {
+    console.error(error);
+    res.redirect('/');
+  }
+});
+
 
 module.exports = router;

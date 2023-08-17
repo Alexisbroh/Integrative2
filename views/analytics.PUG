@@ -64,17 +64,17 @@ html(lang="en")
                 p#anlayticsCard-text.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
                 a#button-analytics.btn.btn-primary(href="#") Show Frequency
                 div
-                  canvas#ChartFrequency
+                canvas#ChartFrequency
                 script(src="https://cdn.jsdelivr.net/npm/chart.js")
                 script.
                   const ctx = document.getElementById('ChartFrequency');
                   new Chart(ctx, {
                     type: 'bar',
                     data: {
-                      labels: ['Sessions taken', 'Level', 'Time'],
+                      labels: ['Time'],
                       datasets: [{
-                        label: 'Sessions, Routine, Minutes',
-                        data: [5, 1, 2],
+                        label: 'Minutes',
+                        data: [10],
                         borderWidth: 1,
                         borderColor: '#36A2EB',
                         backgroundColor: '#9BD0F5',
@@ -100,13 +100,13 @@ html(lang="en")
                   new Chart(time_usage, {
                     type: 'radar',
                     data: {
-                      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                      labels: ['Right shoulder', 'Left shoulder', 'Right biceps', 'Left biceps', 'Right forearm', 'Left forearm'],
                       datasets: [{
-                        label: '# of Votes',
-                        data: [12, 19, 3, 5, 2, 3],
+                        label: '# of Sessions',
+                        data: [12, 42, 25, 36, 31, 25],
                         borderWidth: 1,
-                        borderColor: '#9DB2BF',
-                        backgroundColor: '#526D82',
+                        borderColor: '#07B3E6',
+                        backgroundColor: '#07B3E6',
                       }]
                     },
                     options: {
@@ -130,13 +130,13 @@ html(lang="en")
                   new Chart(intensity, {
                     type: 'line',
                     data: {
-                      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                      labels: ['Monday', 'Tuesay', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
                       datasets: [{
-                        label: '# of Votes',
+                        label: 'Sessions',
                         data: [12, 19, 3, 5, 2, 3],
                         borderWidth: 1,
-                        borderColor: '#36A2EB',
-                        backgroundColor: '#9BD0F5',
+                        borderColor: '#1ADB17',
+                        backgroundColor: '#1ADB17',
                       }]
                     },
                     options: {
