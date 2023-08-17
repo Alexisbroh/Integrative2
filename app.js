@@ -1,51 +1,53 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const flash = require('connect-flash');
+const session = require('express-session');
+const passport = require('passport');
+const morgan = require('morgan');
+const MongoStore = require('connect-mongo');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+const analyticsRouter = require('./routes/index.js');
+const exampleRouter = require('./routes/index.js');
+const initial_pageRouter = require('./routes/index.js');
+const indexRouter = require('./routes/index.js');
+const loginRouter = require('./routes/index.js');
+const my_postsRouter = require('./routes/index.js');
+const routinesRouter = require('./routes/index.js');
+const signUpRouter = require('./routes/index.js');
+const newPostRouter = require('./routes/index.js');
 
+const app = express();
+require('./server.js');
+require('./passport/local-auth.js');
 
-var app = express();
-const port = 3000
+app.use(morgan('dev'));
+app.use(express.urlencoded({extended: false}));
+app.use(session({
+  store: MongoStore.create({ mongoUrl: 'mongodb+srv://Raziel:messi10@cluster0.ajugo4s.mongodb.net/Vibes' }),
+  secret: 'keyboard cat', 
+  resave: true, 
+  saveUninitialized: true 
+}));
 
+app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session());
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
-
-app.get('/', (req, res,) => { 
-  res.sendFile(path.join(__dirname + '/public', '/initial_page.html'));
+app.use((req, res, next) => {
+  res.locals.signinMessage = req.flash('signinMessage');
+  res.locals.signupMessage = req.flash('signupMessage');
+  res.locals.user = req.user;
+  console.log(res.locals);
+  next();
 });
-app.get('/home', (req, res,) => { 
-  res.sendFile(path.join(__dirname + '/public', '/initial_page.html'));
-});
-app.get('/stats', (req, res, ) => { 
-  res.sendFile(path.join(__dirname + '/public', '/analytics.html'));
-}); 
-app.get('/landing', (req, res) => {
-  res.sendFile(path.join(__dirname, '/public', '/landing.html'));
-});
 
-app.get('/activity', (req, res) => {
-  res.sendFile(path.join(__dirname, '/public', '/my_posts.html'));
-});
-
-app.get('/routines', (req, res) => {
-  res.sendFile(path.join(__dirname, '/public', '/routines.html'));
-});
-
-app.get('/example', (req, res) => {
-  res.sendFile(path.join(__dirname, '/public', '/example.html'));
-});
-
-
-
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
+const port = 3000;
+app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'pug');
+app.use(express.static(__dirname));
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -53,12 +55,21 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/', require('./routes/index'));
+app.use('/analytics', analyticsRouter);
+app.use('/example', exampleRouter);
+app.use('/initial_page', initial_pageRouter);
+app.use('/index', indexRouter);
+app.use('/login', loginRouter);
+app.use('/my_posts', my_postsRouter);
+app.use('/routines', routinesRouter);
+app.use('/signUp', signUpRouter);
+app.use('/newPost', newPostRouter);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).render('error'); // Asegúrate de que la vista "error" exista y sea 'error.pug'
 });
 
 // error handler
@@ -70,6 +81,10 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+});
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
 });
 
 module.exports = app;

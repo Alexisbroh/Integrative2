@@ -1,0 +1,52 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(href="https://cdn.jsdelivr.net/npm/daisyui@3.0.0/dist/full.css", rel="stylesheet", type="text/css")
+    link(rel="stylesheet", href="stylesheets/styles.css")
+    title My Posts
+  body
+    aside.navbar.bg-base-150
+      aside.navbar-start
+        aside.dropdown
+          label(tabindex="0", class="btn btn-ghost btn-circle")
+            svg.h-5.w-5(xmlns="http://www.w3.org/2000/svg", fill="none", viewBox="0 0 24 24", stroke="currentColor")
+              path(stroke-linecap="round", stroke-linejoin="round", stroke-width="2", d="M4 6h16M4 12h16M4 18h7")
+          ul(tabindex="0", class="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52")
+            li
+              a(href="/landing") Home
+            li
+              a(href="/analytics") Analytics
+            li
+              a(href="/my_posts") My Posts
+      aside.navbar-center
+        a(href="/landing", class="btn btn-ghost normal-case text-xl") Vibes
+      aside.navbar-end
+        // Coloca aquí cualquier contenido que desees en la parte derecha de la barra de navegación
+    span(name="my activity") My Publications
+    section
+      aside.card.card-side.bg-base-100.shadow-xl
+        aside.card-body.myPosts
+          h2.card-title Dr. Ramirez was make a question
+          p Does a kid can used it?
+          aside.card-actions.justify-end
+            input(type="text", class="btn btn-primary")
+              | Response
+      aside.card.card-side.bg-base-100.shadow-l
+        aside.card-body.myPosts
+          h2.card-title Dr. Pérez
+          p How many time do a person need to use?
+          aside.card-actions.justify-end
+            input(type="text")
+              | Watch your question
+            input(type="submit", class="btn btn-primary")
+      aside.card.card-side.bg-base-100.shadow-l
+        aside.card-body.myPosts
+          h2.card-title Dr. Rodríguez
+          p @Dr.Rodriguez was answered your question
+          aside.card-actions.justify-end
+            input(type="text", class="btn btn-primary")
+              | Watch your mentions
+    script(src="https://cdn.tailwindcss.com")
